@@ -2,7 +2,7 @@ vagrant-hadoop-spark-cluster
 ============================
 
 # 1. Introduction
-### Vagrant project to spin up a cluster of 4, 32-bit CentOS6.5 Linux virtual machines with Hadoop v2.6.0 and Spark v1.1.1. 
+### Vagrant project to spin up a cluster of 4, 32-bit CentOS6.5 Linux virtual machines with Hadoop v2.6.0 and Spark v1.6.0. 
 Ideal for development cluster on a laptop with at least 4GB of memory.
 
 1. node1 : HDFS NameNode + Spark Master
