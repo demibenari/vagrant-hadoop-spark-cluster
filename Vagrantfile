@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 			node.vm.box_url = "http://files.brianbirkinbine.com/vagrant-centos-65-i386-minimal.box"
 			node.vm.provider "virtualbox" do |v|
 			  v.name = "node#{i}"
-			  v.customize ["modifyvm", :id, "--memory", "1024"]
+			  v.customize ["modifyvm", :id, "--memory", "2048"]
 			end
 			if i < 10
 				node.vm.network :private_network, ip: "10.211.55.10#{i}"
