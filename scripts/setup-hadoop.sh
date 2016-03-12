@@ -32,7 +32,7 @@ function setupEnvVars {
 }
 
 function installHadoop {
-	if resourceExists $HADOOP_ARCHIVE; then
+	if resourceExists /vagrant/resources/$HADOOP_ARCHIVE; then
 		installLocalHadoop
 	else
 		installRemoteHadoop

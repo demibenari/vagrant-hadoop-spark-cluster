@@ -24,7 +24,7 @@ function setupEnvVars {
 }
 
 function installSpark {
-	if resourceExists $SPARK_ARCHIVE; then
+	if resourceExists /vagrant/resources/$SPARK_ARCHIVE; then
 		installLocalSpark
 	else
 		installRemoteSpark

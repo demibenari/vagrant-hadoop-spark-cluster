@@ -8,13 +8,13 @@ function installLocalJava {
 }
 
 function installRemoteJava {
-	echo "install open jdk"
+	echo "install Remote JDK"
 	yum install -y jdk-8u73-linux-i586
 }
 
 function setupJava {
 	echo "setting up java"
-	if resourceExists $JAVA_ARCHIVE; then
+	if resourceExists /vagrant/resources/$JAVA_ARCHIVE; then
 		ln -s /usr/local/jdk1.8.0_73 /usr/local/java
 	else
 		ln -s /usr/lib/jvm/jre /usr/local/java
@@ -28,7 +28,7 @@ function setupEnvVars {
 }
 
 function installJava {
-	if resourceExists $JAVA_ARCHIVE; then
+	if resourceExists /vagrant/resources/$JAVA_ARCHIVE; then
 		installLocalJava
 	else
 		installRemoteJava
@@ -36,6 +36,7 @@ function installJava {
 }
 
 echo "setup java"
+echo "`ls -l /vagrant/resources/`"
 installJava
 setupJava
 setupEnvVars

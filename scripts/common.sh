@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #java
-JAVA_ARCHIVE=jdk-8u73-linux-i586.tar.gz
+JAVA_ARCHIVE=jdk-8u73-linux-i586.gz
 #hadoop
 HADOOP_PREFIX=/usr/local/hadoop
 HADOOP_CONF=$HADOOP_PREFIX/etc/hadoop
@@ -22,18 +22,22 @@ RES_SSH_COPYID_MODIFIED=$SSH_RES_DIR/ssh-copy-id.modified
 RES_SSH_CONFIG=$SSH_RES_DIR/config
 
 function resourceExists {
-	FILE=/vagrant/resources/$1
-	if [ -e $FILE ]
+	FILE=$1
+	echo "File: $FILE"
+	echo "Path: `pwd`"
+	if [ -e "$FILE" ]
 	then
+		echo "Exists: $FILE"
 		return 0
 	else
+		echo "Doesn't Exists: $FILE"
 		return 1
 	fi
 }
 
 function fileExists {
 	FILE=$1
-	if [ -e $FILE ]
+	if [ -e "$FILE" ]
 	then
 		return 0
 	else
