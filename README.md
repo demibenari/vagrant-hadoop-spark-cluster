@@ -18,8 +18,8 @@ Ideal for development cluster on a laptop with at least 4GB of memory.
 5. The Vagrant box is downloaded to the ~/.vagrant.d/boxes directory. On Windows, this is C:/Users/{your-username}/.vagrant.d/boxes.
 
 # 3. Getting Started
-1. [Download and install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-2. [Download and install Vagrant](http://www.vagrantup.com/downloads.html).
+1. [Download and install VirtualBox](https://www.virtualbox.org/wiki/Downloads) - VirtualBox 5.0 
+2. [Download and install Vagrant](http://www.vagrantup.com/downloads.html) - Vagrant 1.8.1
 3. Run ```vagrant box add centos65 http://files.brianbirkinbine.com/vagrant-centos-65-i386-minimal.box```
 4. Git clone this project, and change directory (cd) into this project (directory).
 5. [Download Hadoop 2.6 into the /resources directory](http://apache.crihan.fr/dist/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz)
